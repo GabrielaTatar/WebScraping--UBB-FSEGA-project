@@ -19,7 +19,7 @@ async function postData(url, data) { // trimite post request-uri, trimite json, 
 }
 
 
-async function deleteData(url) { // trimite delete request-uri, trimite json, returneaza raspunsul ca string, deci trebuie deserializat daca e primit json
+async function deleteData(url) { // trimite delete request-uri, returneaza raspunsul ca string
     try {
         const response = await fetch(url, {
             method: 'DELETE',
@@ -35,6 +35,7 @@ async function deleteData(url) { // trimite delete request-uri, trimite json, re
         throw error;
     }
 }
+
 
 async function getData(url) { // returneaza raspunsul ca string, deci trebuie deserializat daca raspunsul primit e de tip json
     try {
@@ -110,12 +111,7 @@ async function deleteInJsonServer() {
     console.log("a intrat in fct");
     const delete_id = document.getElementById("delete-input").value;
 
-    console.log(delete_id);
-    //this will be sent to the backend
-    //let result = quotes.find(item => item.quote === delete_quote);
-    //quotesToDelete = [result];
-    //quotesToDelete = [delete_quote];
-    //console.log(JSON.stringify(quotesToDelete));
+    //console.log(delete_quote);
 
     //delete from global variable here
     array = quotes.filter(item => item.id === delete_id);

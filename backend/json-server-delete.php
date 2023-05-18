@@ -1,7 +1,5 @@
 <?php
 
-//$jsonData = file_get_contents('php://input');
-//$dataArray = json_decode($jsonData);
 $serverUrl = 'http://localhost:4000/quotes';
 
 // Get the ID from the query parameters
@@ -10,8 +8,6 @@ $id = $_GET['id'];
 $url = $serverUrl . '/' . $id;
 
 
-$elementErased = true;
-//$jsonObject = json_encode($dataObject);
 $headers = [
     'Content-Type: application/json',
 ];
